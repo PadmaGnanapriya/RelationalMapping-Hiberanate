@@ -1,13 +1,32 @@
-package lk.ac.uok.setu;
+package OneToOne;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /**
  * Created by Padma Gnanapiya (SE/2017/014)
  */
 
-
+@Entity
 public class Student {
-    private String name;;
+    @Column(name = "Student_Id")
+    private String name;
+    @Id
+    @Column(name="Student_Name")
     private int id;
+
+    @OneToOne(mappedBy = "student")
+    private LapTop lapTop;
+
+    public Student() {
+    }
+
+    public Student(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -27,7 +46,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "lk.ac.uok.setu.Student{" +
+        return "OneToOne.Student{" +
                 "name='" + name + '\'' +
                 ", id=" + id +
                 '}';
