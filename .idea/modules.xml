@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TTTT.iml" filepath="$PROJECT_DIR$/TTTT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RelationalMapingHibernate.iml" filepath="$PROJECT_DIR$/RelationalMapingHibernate.iml" />
     </modules>
   </component>
 </project>
