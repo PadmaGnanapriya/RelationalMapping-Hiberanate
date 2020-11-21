@@ -11,7 +11,7 @@ import org.hibernate.cfg.Configuration;
  */
 
 
-public class OneToMany {
+public class OneToManyDemo {
     public static void main(String[] args) {
         Configuration configuration= new Configuration();
         configuration.configure("hibernate.cfg.xml")

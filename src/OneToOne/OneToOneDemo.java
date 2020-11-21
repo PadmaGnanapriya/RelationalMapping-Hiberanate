@@ -1,23 +1,20 @@
-package ManyToMany;
+package OneToOne;
 
-import OneToMany.Subject;
-import OneToMany.Teacher;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-/**
- * Created by Padma Gnanapiya (SE/2017/014)
- */
+public class OneToOneDemo {
 
-
-public class ManyToMany {
     public static void main(String[] args) {
+	// write your code here
         Configuration configuration= new Configuration();
         configuration.configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Orders.class)
-                .addAnnotatedClass(Items.class);
+                .addAnnotatedClass(Student.class)
+                .addAnnotatedClass(LapTop.class);
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.openSession();
+
     }
 }
